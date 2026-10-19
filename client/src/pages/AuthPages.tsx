@@ -40,7 +40,7 @@ export function Login() {
           <CardContent className="p-8 space-y-6">
             <div className="text-center space-y-2">
               <img
-                src="/manus-storage/alhuda-logo_7a65487d.png"
+                src="/al-huda-academy/images/alhuda-logo_7a65487d.png"
                 alt="أكاديمية الهدى"
                 className="w-14 h-14 mx-auto object-contain"
               />
@@ -138,7 +138,7 @@ export function Register() {
           <CardContent className="p-8 space-y-6">
             <div className="text-center space-y-2">
               <img
-                src="/manus-storage/alhuda-logo_7a65487d.png"
+                src="/al-huda-academy/images/alhuda-logo_7a65487d.png"
                 alt="أكاديمية الهدى"
                 className="w-14 h-14 mx-auto object-contain"
               />

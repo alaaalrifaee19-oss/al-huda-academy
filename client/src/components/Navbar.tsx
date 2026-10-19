@@ -74,7 +74,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <img
-            src="/manus-storage/alhuda-logo_7a65487d.png"
+            src="/al-huda-academy/images/alhuda-logo_7a65487d.png"
             alt="شعار أكاديمية الهدى التعليمية"
             className="w-12 h-12 object-contain group-hover:scale-105 transition-transform"
           />

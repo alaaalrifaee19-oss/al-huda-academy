@@ -57,7 +57,7 @@ export default function Home() {
         className="relative overflow-hidden bg-cover bg-center bg-no-repeat py-12 md:py-20 border-b border-border/50"
         style={{
           backgroundImage:
-            "linear-gradient(90deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.78) 48%, rgba(255,255,255,0.52) 100%), url('/manus-storage/alhuda-home-background_fe40e5b0.png')",
+            "linear-gradient(90deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.78) 48%, rgba(255,255,255,0.52) 100%), url('/al-huda-academy/images/alhuda-home-background_fe40e5b0.png')",
         }}
       >
         <div className="container grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -120,7 +120,7 @@ export default function Home() {
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-accent to-blue-600 opacity-20 blur-xl"></div>
               <div className="relative overflow-hidden rounded-3xl border border-white/60 dark:border-slate-800 shadow-2xl bg-white">
                 <img
-                  src="/manus-storage/alhuda-hero_9251f56c.png"
+                  src="/al-huda-academy/images/alhuda-hero_9251f56c.png"
                   alt="أطفال أكاديمية الهدى في حصص تفاعلية"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />
@@ -502,10 +502,10 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              ["/manus-storage/image3_da2fbdbe.jpg", "فرحة الأطفال بالإنجاز"],
-              ["/manus-storage/image7_897d74f4.jpg", "تدريب الحساب الذهني"],
-              ["/manus-storage/image19_a3f4e218.jpg", "التفكير المكاني بمكعب روبيك"],
-              ["/manus-storage/image50_cbb58d80.jpg", "التعلم الجماعي"],
+              ["/al-huda-academy/images/image3.jpg", "فرحة الأطفال بالإنجاز"],
+              ["/al-huda-academy/images/image7.jpg", "تدريب الحساب الذهني"],
+              ["/al-huda-academy/images/image19.jpg", "التفكير المكاني بمكعب روبيك"],
+              ["/al-huda-academy/images/image50.jpg", "التعلم الجماعي"],
             ].map(([src, alt]) => <img key={src} src={src} alt={alt} loading="lazy" className="w-full aspect-[4/3] object-cover rounded-2xl border border-border shadow-sm hover:scale-[1.02] transition-transform" />)}
           </div>
         </div>

@@ -13,7 +13,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3">
               <div className="bg-white p-1 rounded-xl shadow">
                 <img
-                  src="/manus-storage/alhuda-logo_7a65487d.png"
+                  src="/al-huda-academy/images/alhuda-logo_7a65487d.png"
                   alt="أكاديمية الهدى التعليمية"
                   className="w-10 h-10 object-contain"
                 />

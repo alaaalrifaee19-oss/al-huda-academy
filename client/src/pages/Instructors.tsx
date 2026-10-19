@@ -18,7 +18,7 @@ import {
   Mail,
   Phone,
 } from "lucide-react";
-import { STATIC_INSTRUCTORS } from "@/lib/staticAcademyData";
+import { STATIC_COURSES, STATIC_INSTRUCTORS } from "@/lib/staticAcademyData";
 
 export function Instructors() {
   const { data: instructors, isLoading } = trpc.instructors.list.useQuery();
@@ -211,7 +211,7 @@ export function InstructorProfile() {
             <div className="space-y-4">
               <h3 className="font-extrabold text-xl text-primary">الدورات المقدمة بواسطة {instructor.name}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {courses.map((c) => (
+                {courses.map((c: any) => (
                   <Card key={c.id} className="overflow-hidden border-border hover:shadow-md transition-shadow">
                     <img src={c.imageUrl} alt={c.title} className="w-full aspect-video object-cover" />
                     <CardContent className="p-4 space-y-2">

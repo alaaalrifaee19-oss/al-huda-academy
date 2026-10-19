@@ -151,7 +151,10 @@ function vitePluginManusDebugCollector(): Plugin {
 }
 
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
-const pagesBase = process.env.GITHUB_ACTIONS ? "/manus/" : "/";
+const repositoryName = process.env.GITHUB_REPOSITORY?.split("/")[1];
+const pagesBase = process.env.GITHUB_ACTIONS
+  ? `/${repositoryName || "al-huda-academy"}/`
+  : "/";
 
 export default defineConfig({
   plugins,

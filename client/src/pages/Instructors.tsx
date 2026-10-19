@@ -109,21 +109,16 @@ export function Instructors() {
 
 export function InstructorProfile() {
   const { slug } = useParams<{ slug: string }>();
-  const { data, isLoading } = trpc.instructors.getBySlug.useQuery({ slug: slug || "" });
+  const { data } = trpc.instructors.getBySlug.useQuery({ slug: slug || "" });
+  const localInstructor = STATIC_INSTRUCTORS.find((item) => item.slug === slug);
+  const instructor = data?.instructor ?? localInstructor;
+  const courses = data?.courses ?? STATIC_COURSES.filter((course) => {
+    if (slug === "alaa-alrefai") return course.slug === "kids-ai" || course.slug === "trainer-ai";
+    if (slug === "sahar-alhardan") return false;
+    return course.slug !== "kids-ai" && course.slug !== "trainer-ai";
+  });
 
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex flex-col bg-background">
-        <Navbar />
-        <div className="flex-1 flex items-center justify-center">
-          <p className="text-muted-foreground">جارٍ تحميل الملف التعريفي...</p>
-        </div>
-        <Footer />
-      </div>
-    );
-  }
-
-  if (!data || !data.instructor) {
+  if (!instructor) {
     return (
       <div className="min-h-screen flex flex-col bg-background">
         <Navbar />
@@ -137,8 +132,6 @@ export function InstructorProfile() {
       </div>
     );
   }
-
-  const { instructor, courses } = data;
 
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">

@@ -33,6 +33,10 @@ export type StaticInstructor = {
   slug: string;
   title: string;
   bio: string;
+  detailedBio: string;
+  qualifications: string;
+  credentials: string;
+  location: string;
   avatarUrl: string;
   rating: string;
   reviewCount: number;
@@ -41,7 +45,7 @@ export type StaticInstructor = {
 };
 
 export const STATIC_INSTRUCTORS: StaticInstructor[] = [
-  { id: 1, name: "أ. هدى عابدين", slug: "huda-abdeen", title: "مؤسسة الأكاديمية ومدربة دولية معتمدة في الحساب الذهني", bio: "بكالوريوس فيزياء وأساليب تدريسها. مدربة أطفال ومدربين معتمدة دولياً، متخصصة في تطوير القدرات العقلية للأطفال من خلال أساليب مبتكرة.", avatarUrl: image("huda-abdeen-portrait_095fea91.jpg"), rating: "5.0", reviewCount: 68, studentsTrained: 250, trainersGraduated: 55 },
-  { id: 2, name: "أ. آلاء الرفاعي", slug: "alaa-alrefai", title: "مدربة برمجة وذكاء اصطناعي للأطفال واليافعين", bio: "مدربة وتربوية شغوفة بتبسيط البرمجة والذكاء الاصطناعي للأطفال واليافعين، وتقديم المعرفة التقنية بطريقة آمنة وممتعة.", avatarUrl: image("image33.jpg"), rating: "4.9", reviewCount: 42, studentsTrained: 180, trainersGraduated: 35 },
-  { id: 3, name: "أ. سحر الحردان", slug: "sahar-alhardan", title: "مدربة حساب ذهني باللغة الألمانية", bio: "مدربة متخصصة في تقديم برامج تنمية الذاكرة والحساب الذهني السريع للأطفال الناطقين بالألمانية والعرب المقيمين بأوروبا.", avatarUrl: image("image18.jpg"), rating: "4.9", reviewCount: 38, studentsTrained: 120, trainersGraduated: 15 },
+  { id: 1, name: "أ. هدى عابدين", slug: "huda-abdeen", title: "مؤسسة الأكاديمية ومدربة دولية معتمدة في الحساب الذهني", bio: "بكالوريوس فيزياء وأساليب تدريسها. مدربة أطفال ومدربين معتمدة دولياً، متخصصة في تطوير القدرات العقلية للأطفال من خلال أساليب مبتكرة.", detailedBio: "دربت أكثر من 50 مدربة وأكثر من 200 طفل في العديد من الدول العربية والأوروبية، وخرجت مدربات أطفال قادرات على تدريب الأطفال بلغات متعددة.", qualifications: "بكالوريوس فيزياء وطرق تدريسها | مدربة مدربات معتمدة دولياً | أكثر من 12 عاماً خبرة تعليمية", credentials: "اعتماد دولي من مؤسسة علمني العالمية | شهادات تميز في التعليم الإبداعي والذكاء الحسابي", location: "الشرق الأوسط وأوروبا (أونلاين)", avatarUrl: image("huda-abdeen-portrait_095fea91.jpg"), rating: "5.0", reviewCount: 68, studentsTrained: 250, trainersGraduated: 55 },
+  { id: 2, name: "أ. آلاء الرفاعي", slug: "alaa-alrefai", title: "مدربة برمجة وذكاء اصطناعي للأطفال واليافعين", bio: "مدربة وتربوية شغوفة بتبسيط البرمجة والذكاء الاصطناعي للأطفال واليافعين، وتقديم المعرفة التقنية بطريقة آمنة وممتعة.", detailedBio: "تتخصص في تصميم أنشطة تعليمية تساعد الطفل على التفكير الخوارزمي وصياغة الأسئلة والتحقق من المعلومات وتحويل التقنية إلى مساحة للإبداع.", qualifications: "تخصص في التعليم الرقمي والذكاء الاصطناعي للأطفال | خبرة في تصميم الحقائب التدريبية والتعلم الافتراضي", credentials: "مدربة في البرمجة والذكاء الاصطناعي للأطفال | خبرة في تدريب المعلمات وبناء المشاريع التعليمية", location: "أونلاين", avatarUrl: image("image33.jpg"), rating: "4.9", reviewCount: 42, studentsTrained: 180, trainersGraduated: 35 },
+  { id: 3, name: "أ. سحر الحردان", slug: "sahar-alhardan", title: "مدربة حساب ذهني باللغة الألمانية", bio: "مدربة متخصصة في تقديم برامج تنمية الذاكرة والحساب الذهني السريع للأطفال الناطقين بالألمانية والعرب المقيمين بأوروبا.", detailedBio: "متخصصة في تقديم برامج تنمية الذاكرة والحساب الذهني السريع للأطفال الناطقين بالألمانية والعرب المقيمين بأوروبا لتعزيز التفوق المدرسي.", qualifications: "بكالوريوس علوم (فيزياء) | شهادة تدريس متقدمة بألمانيا | خبرة 10 سنوات في المدارس والمعاهد الأوروبية", credentials: "اعتماد تدريب الحساب الذهني التفاعلي بالألمانية | تدريب مكثف لأطفال المهجر", location: "ألمانيا", avatarUrl: image("image18.jpg"), rating: "4.9", reviewCount: 38, studentsTrained: 120, trainersGraduated: 15 },
 ];

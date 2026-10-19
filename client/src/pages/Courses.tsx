@@ -106,8 +106,7 @@ export default function Courses() {
             </div>
           </div>
 
-          {isLoading ? <div className="py-20 text-center"><RefreshCw className="w-8 h-8 animate-spin mx-auto text-primary" /><p className="text-muted-foreground text-sm mt-3">جارٍ تحميل الدورات...</p></div> : (
-            <div className="space-y-16">
+          <div className="space-y-16">
               {(track === "all" || track === "children") && <section><div className="flex items-center gap-3 mb-6"><div className="w-12 h-12 rounded-2xl bg-orange-100 text-accent flex items-center justify-center"><Baby className="w-6 h-6" /></div><div><h2 className="text-2xl font-black text-primary">دورات الأطفال</h2><p className="text-sm text-muted-foreground">مهارات أساسية وعقلية يتعلمها الطفل باللعب والتدرج والمتابعة.</p></div></div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">{childrenCourses.map(renderCourseCard)}</div></section>}
               {(track === "all" || track === "trainers") && <section>
                 <div className="flex items-center gap-3 mb-6"><div className="w-12 h-12 rounded-2xl bg-blue-100 text-primary flex items-center justify-center"><Users className="w-6 h-6" /></div><div><h2 className="text-2xl font-black text-primary">دورات المدربين</h2><p className="text-sm text-muted-foreground">تأهيل عملي للمعلمات والمدربات لبناء جلسات تعليمية مؤثرة وآمنة.</p></div></div>
@@ -129,8 +128,7 @@ export default function Courses() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">{trainerCourses.map(renderCourseCard)}</div>
               </section>}
               {catalogCourses.length === 0 && <div className="py-20 text-center bg-white dark:bg-card rounded-2xl border border-dashed border-border p-8"><BookOpen className="w-12 h-12 text-muted-foreground mx-auto" /><h3 className="font-bold text-lg text-primary mt-3">لم يتم العثور على دورة</h3><p className="text-xs text-muted-foreground mt-2">جربي تغيير كلمات البحث أو الفلاتر.</p></div>}
-            </div>
-          )}
+          </div>
         </div>
       </section>
       <Footer />

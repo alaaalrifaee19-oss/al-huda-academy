@@ -154,11 +154,6 @@ export default function Navbar() {
             </DropdownMenu>
           ) : (
             <div className="flex items-center gap-2">
-              <Link href="/login">
-                <Button variant="ghost" size="sm" className="font-bold text-primary">
-                  تسجيل الدخول
-                </Button>
-              </Link>
               <Link href="/register">
                 <Button
                   size="sm"
@@ -229,16 +224,9 @@ export default function Navbar() {
                   </a>
                 </div>
               ) : (
-                <div className="grid grid-cols-2 gap-2 mt-2">
-                  <Link href="/login" onClick={() => setIsOpen(false)}>
-                    <Button variant="outline" className="w-full font-bold">
-                      تسجيل الدخول
-                    </Button>
-                  </Link>
+                <div className="mt-2">
                   <Link href="/register" onClick={() => setIsOpen(false)}>
-                    <Button className="w-full bg-accent hover:bg-orange-600 font-bold">
-                      ابدأ التعلم
-                    </Button>
+                    <Button className="w-full bg-accent hover:bg-orange-600 font-bold">ابدأ التعلم</Button>
                   </Link>
                 </div>
               )}

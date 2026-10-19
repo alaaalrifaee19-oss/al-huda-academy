@@ -115,7 +115,7 @@ export function InstructorProfile() {
   const courses = data?.courses ?? STATIC_COURSES.filter((course) => {
     if (slug === "alaa-alrefai") return course.slug === "kids-ai" || course.slug === "trainer-ai";
     if (slug === "sahar-alhardan") return false;
-    return course.slug !== "kids-ai" && course.slug !== "trainer-ai";
+    return !["kids-quran-arabic", "kids-english", "kids-ai", "trainer-ai"].includes(course.slug);
   });
 
   if (!instructor) {

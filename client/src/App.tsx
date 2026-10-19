@@ -10,7 +10,7 @@ import Courses from "./pages/Courses";
 import CourseDetails from "./pages/CourseDetails";
 import About from "./pages/About";
 import { Instructors, InstructorProfile } from "./pages/Instructors";
-import { Blog, BlogPostDetails, FAQ, Contact } from "./pages/ContentPages";
+import { Contact } from "./pages/ContentPages";
 import Gallery from "./pages/Gallery";
 import { LegalPrivacy, LegalTerms } from "./pages/VerificationAndLegal";
 import { StudentDashboard } from "./pages/StudentDashboard";
@@ -34,9 +34,6 @@ function AppRouter() {
       <Route path="/courses/:slug" component={CourseDetails} />
       <Route path="/instructors" component={Instructors} />
       <Route path="/instructors/:slug" component={InstructorProfile} />
-      <Route path="/blog" component={Blog} />
-      <Route path="/blog/:slug" component={BlogPostDetails} />
-      <Route path="/faq" component={FAQ} />
       <Route path="/contact" component={Contact} />
       <Route path="/gallery" component={Gallery} />
       <Route path="/privacy" component={LegalPrivacy} />

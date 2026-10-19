@@ -45,7 +45,6 @@ export default function Home() {
   });
   const { data: instructors } = trpc.instructors.list.useQuery({ featuredOnly: true });
   const { data: reviews } = trpc.reviews.list.useQuery({ featuredOnly: true });
-  const { data: faqs } = trpc.faqs.list.useQuery();
   const requestedCourses = featuredCourses?.filter((course) => REQUESTED_COURSE_SLUGS.has(course.slug)).slice(0, 3);
 
   return (
@@ -120,7 +119,7 @@ export default function Home() {
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-accent to-blue-600 opacity-20 blur-xl"></div>
               <div className="relative overflow-hidden rounded-3xl border border-white/60 dark:border-slate-800 shadow-2xl bg-white">
                 <img
-                  src="/al-huda-academy/images/alhuda-hero_9251f56c.png"
+                  src="/al-huda-academy/images/alhuda-home-background_fe40e5b0.png"
                   alt="أطفال أكاديمية الهدى في حصص تفاعلية"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />
@@ -507,44 +506,6 @@ export default function Home() {
               ["/al-huda-academy/images/image19.jpg", "التفكير المكاني بمكعب روبيك"],
               ["/al-huda-academy/images/image50.jpg", "التعلم الجماعي"],
             ].map(([src, alt]) => <img key={src} src={src} alt={alt} loading="lazy" className="w-full aspect-[4/3] object-cover rounded-2xl border border-border shadow-sm hover:scale-[1.02] transition-transform" />)}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ SECTION */}
-      <section className="py-16 bg-slate-50 dark:bg-slate-900/40 border-t border-border">
-        <div className="container max-w-4xl">
-          <div className="text-center space-y-3 mb-12">
-            <Badge className="bg-blue-100 text-primary hover:bg-blue-100 border-none font-bold text-xs px-3 py-1">
-              الأسئلة الشائعة
-            </Badge>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-primary">
-              إجابات على استفسارات الأهل والمتدربات
-            </h2>
-          </div>
-
-          <div className="space-y-4">
-            {faqs?.slice(0, 5).map((faq) => (
-              <div
-                key={faq.id}
-                className="bg-white dark:bg-card p-5 rounded-xl border border-border shadow-sm space-y-2 text-right"
-              >
-                <h3 className="font-bold text-base text-primary flex items-center justify-between gap-2">
-                  <span>{faq.question}</span>
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed pt-1">
-                  {faq.answer}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <Link href="/faq">
-              <Button variant="outline" className="font-bold text-primary">
-                عرض جميع الأسئلة والإرشادات
-              </Button>
-            </Link>
           </div>
         </div>
       </section>

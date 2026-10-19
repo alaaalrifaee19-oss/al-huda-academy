@@ -9,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Search, Star, BookOpen, ArrowLeft, RefreshCw, Users, Baby, MessageCircle, Lightbulb, CheckCircle2 } from "lucide-react";
+import { STATIC_COURSES } from "@/lib/staticAcademyData";
 
 const CHILDREN_SLUGS = [
   "kids-quran-arabic",
@@ -37,7 +38,7 @@ export default function Courses() {
   const { data: courses, isLoading } = trpc.courses.list.useQuery({ sortBy: "newest" });
 
   const catalogCourses = useMemo(() => {
-    const source = (courses ?? []).filter((course) => CATALOG_SLUGS.has(course.slug));
+    const source = STATIC_COURSES.filter((course) => CATALOG_SLUGS.has(course.slug));
     return source.filter((course) => {
       const matchesTrack = track === "all" || (track === "children" ? CHILDREN_SLUGS.includes(course.slug) : TRAINER_SLUGS.includes(course.slug));
       const term = searchTerm.trim().toLowerCase();

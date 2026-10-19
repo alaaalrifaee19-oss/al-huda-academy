@@ -33,8 +33,6 @@ export default function Navbar() {
     { title: "البرامج والدورات", href: "/courses" },
     { title: "المدربون", href: "/instructors" },
     { title: "المعرض", href: "/gallery" },
-    { title: "المدونة", href: "/blog" },
-    { title: "الأسئلة الشائعة", href: "/faq" },
     { title: "تواصل معنا", href: "/contact" },
   ];
 

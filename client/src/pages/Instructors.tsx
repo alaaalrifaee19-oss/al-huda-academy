@@ -18,6 +18,7 @@ import {
   Mail,
   Phone,
 } from "lucide-react";
+import { STATIC_INSTRUCTORS } from "@/lib/staticAcademyData";
 
 export function Instructors() {
   const { data: instructors, isLoading } = trpc.instructors.list.useQuery();
@@ -43,7 +44,7 @@ export function Instructors() {
       <section className="py-12 flex-1">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {instructors?.map((inst) => (
+            {STATIC_INSTRUCTORS.map((inst) => (
               <Card
                 key={inst.id}
                 className="overflow-hidden border-border/80 hover:shadow-xl transition-all duration-300 p-6 flex flex-col justify-between space-y-4 bg-white dark:bg-card"

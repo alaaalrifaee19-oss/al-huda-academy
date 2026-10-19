@@ -80,11 +80,6 @@ export default function Footer() {
                   معرض صور الأكاديمية
                 </Link>
               </li>
-              <li>
-                <Link href="/blog" className="hover:text-amber-400 transition-colors">
-                  مدونة التفكير والتربية
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -158,9 +153,6 @@ export default function Footer() {
             </Link>
             <Link href="/terms" className="hover:text-slate-300 transition-colors">
               الشروط والأحكام
-            </Link>
-            <Link href="/faq" className="hover:text-slate-300 transition-colors">
-              الأسئلة الشائعة
             </Link>
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">
               الدعم الفني عبر الواتساب
